@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/admin_login.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>AIVerse | Login</title>
+</head>
+
+<body>
+    <div class="login-info">
+        <div class="login">
+            <div class="form-container">
+                <p class="title">Login</p>
+                <form class="form" action="/login/" method="post">{% csrf_token %}
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="">
+                    </div><br>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="">
+                        <div class="forgot">
+                            <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+                        </div>
+                    </div>
+                    <a class="btn-a" href=""><button class="sign">Login</button></a>
+                </form>
+            </div>
+        </div>
+
+        <div class="info">
+            <h1>AIVerse.</h1>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

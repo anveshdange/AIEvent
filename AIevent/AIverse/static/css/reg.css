@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration{
+    background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+    /* animation: animate2 10s linear infinite; */
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-body{
+    width: 50%;
+    padding: 30px;
+    /* border: 1px solid black; */
+    /* background-color: #f1f2f7; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    width: 100%;
+    /* border: 1px solid green; */
+}
+
+label{
+    font-weight: 800;
+}
+
+.input-field{
+    width: 90%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.input-field:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(173, 173, 173);
+}
+
+.btn-pay{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    /* border: 1px solid black; */
+    padding-right: 40px;
+}
+
+#pay-button{
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight:700;
+    font-size: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+    /* animation: animate2 10s linear infinite; */
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 567px){
+
+    body{
+        height: 140vh;
+        align-items: start;
+    }
+    .main-body{
+        padding: 20px;
+        width: 90%;
+        margin-top: 50px;
+        /* border: 1px solid green; */
+    }
+    .form{
+        display: flex;
+        flex-direction: column ;
+        width: 100%;
+        /* border: 1px solid blue; */
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Poppins:wght@100;200;400&display=swap"
+        rel="stylesheet">
+    <title>Payment Submission</title>
+    <script>
+        function enableSubmit() {
+            const uploadInput = document.getElementById('screenshot');
+            const submitButton = document.getElementById('submitBtn');
+
+            if (uploadInput.files.length > 0) {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
+        }
+
+        function showSuccessMessage() {
+            // Display a success message using a popup, alert, or other method
+            alert("Payment screenshot submitted successfully!");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main-div">
+        <p>Name: {{name}}</p>
+        <p>Contact: {{number}}</p>
+        <p>Branch: {{branch}}</p>
+        <p>Year: {{year}}</p>
+        <p>Email: {{email}}</p>
+        <p>Team: {{team_size}}</p>
+        <p>Event: {{event}}</p>
+        <!-- Your form and other content here -->
+        <form action="/payment/" method="post" enctype="multipart/form-data" class="payment-form">{% csrf_token %}
+            <h1>Payment</h1><br>
+            <img src="{% static 'Static_images/QR.jfif' %}" alt="payment qr" id="QR"><br><br>
+
+            <input type="hidden" class="input-field" name="name" value="{{name}}">
+            <input type="hidden" class="input-field" name="contact" value="{{number}}">
+            <input type="hidden" class="input-field" name="email" value="{{email}}">
+            <input type="hidden" class="input-field" name="Branch" value="{{branch}}">
+            <input type="hidden" class="input-field" name="Year" value="{{year}}">
+            <input type="hidden" class="input-field" name="event" value="{{event}}">
+            <input type="hidden" class="input-field" name="team_size" value="{{team_size}}">
+            <input type="hidden" class="input-field" name="team_member" value="{{team_members}}">
+
+
+
+            <label for="screenshot">Upload Payment Screenshot:</label><br><br>
+            <input type="file" id="screenshot" name="screenshot" accept="image/*" onchange="enableSubmit()"><br> <br>
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+    </div>
+
+<!--    <script>-->
+<!--        document.querySelector('.payment-form').addEventListener('submit', function(event) {-->
+<!--            event.preventDefault(); // Prevent the actual form submission for this example-->
+<!--            showSuccessMessage(); // Display the success message-->
+<!--            window.location.href = "";-->
+<!--        });-->
+<!--    </script>-->
+</body>
+
+</html>
