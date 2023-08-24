@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/master.css' %}">
@@ -21,7 +22,7 @@
             </div>
             <div class="menu">
                 <ul class='menu-links'>
-                    <li><a href="#">LOGOUT</a></li>
+                    <li><a href="/logout">LOGOUT</a></li>
                 </ul>
             </div>
 
@@ -41,12 +42,11 @@
             <th>Year</th>
             <th>Email</th>
             <th>Contact</th>
-            <th>Team Member</th>
-            <th>Member 1</th>
-            <th>Member 2</th>
-            <th>Member 3</th>
-            <th>Member 4</th>
-            <th>Transaction</th>
+            <th>Team Size</th>
+            <th>Team Members</th>
+            <th>ScreeShot</th>
+            <th>Transaction ID</th>
+            <th>Date</th>
         </tr>
     </table>
 </body>
