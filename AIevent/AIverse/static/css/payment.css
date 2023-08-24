@@ -11,6 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #0d1116;
 }
 
 #QR{
@@ -57,5 +58,4 @@ body{
         height: 80vh;
     }
 }
-
 

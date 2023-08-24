@@ -20,6 +20,19 @@
         integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <script>
+        const nav = document.getElementById('navbar');
+        window.onscroll = function () { 
+        if (document.body.scrollTop >= 30 ||  document.documentElement.scrollTop >= 30 ) {
+            navbar.classList.add("nav-colored");
+            navbar.classList.remove("nav-transparent");
+        } 
+        else{
+            navbar.classList.add("nav-transparent");
+            navbar.classList.remove("nav-colored");
+        }
+        };
+    </script>
     <title>AIverse</title>
     <link rel="icon" type="images/x-icon" href="https://www.w3docs.com/favicon.ico" />
 </head>
@@ -27,7 +40,7 @@
 <body>
 
         <!-- header section  -->
-        <header class="navbar">
+        <header class="navbar nav-colored nav-transparent" id="navbar">
             <div class="header">
                 <div id="logo">
                     <a href=" "><h1>AIverse.</h1></a>
@@ -103,8 +116,11 @@
 
         <!-- hero section  -->
         <div class="intro">
-            <h1 class="intro-class">We<span class="heighlight1"> Welcome</span> <br> you to the <br> <span
-                    class="heighlight2">AIverse.</span></h1>
+            <h1 class="intro-class">
+                <span class="heighlight1"> Welcome</span> 
+                <br>to the <br> 
+                <span class="heighlight2">AIverse.</span>
+            </h1>
 
             <div class="down-arrow">
                 <a href="#event"><i class="fa-solid fa-angle-down fa-2xl"></i></a>
@@ -120,46 +136,58 @@
 
             <div class="slider">
                 <div class="slide-track">
+
+                    <!-- Cubical Realm -->
                     <div class="slide">
                         <img src="{% static 'Static_images/beatbots.jpeg' %}"  alt="" />
                        <div class="buttons">
-                            <a href="/explore"><button>Explore</button></a>
+                            <a href="/cubical_realm"><button>Explore CR</button></a>
                             <a href="/reg"><button>Register</button></a>
                        </div>
                     </div>
+
+                    <!-- Giga Gen  -->
                     <div class="slide">
                         <img src="{% static 'Static_images/beatbots.jpeg' %}" alt="" />
                        <div class="buttons">
-                            <a href="/explore"><button>Explore</button></a>
+                            <a href="/giga_gen"><button>Explore GG</button></a>
                             <a href="/reg"><button>Register</button></a>
                        </div>
                         
                     </div>
+                    
+                    <!-- Beat Bots -->
                     <div class="slide">
                         <img src="{% static 'Static_images/beatbots.jpeg' %}"  alt="" />
                        <div class="buttons">
-                            <a href="/explore"><button>Explore</button></a>
+                            <a href="/beat_bots"><button>Explore BB</button></a>
                             <a href="/reg"><button>Register</button></a>
                        </div>
     
                     </div>
+                    
+                    <!-- Opti ML -->
                     <div class="slide">
-                        <img src="{% static 'Static_images/beatbots.jpeg' %}"  alt="" />
+                        <img src="{% static 'Static_images/optiml.jpeg' %}"  alt="" />
                        <div class="buttons">
-                            <a href="/explore"><button>Explore</button></a>
+                            <a href="/opti_ml"><button>Explore O-ML</button></a>
                             <a href="/reg"><button>Register</button></a>
                        </div>
     
                     </div>
+
+                    <!-- Startup mela -->
                     <div class="slide">
                         <img src="{% static 'Static_images/venturevista.jpg' %}"  alt="" />
                        <div class="buttons">
-                            <a href="/explore"><button>Explore</button></a>
+                            <a href="/ss"><button>Explore VV</button></a>
                             <a href="/reg"><button>Register</button></a>
                        </div>
     
                     </div>
-                    <div class="slide extra">
+
+                    <!-- Extra slides -->
+                    <!-- <div class="slide extra">
                         <img src="{% static 'Static_images/beatbots.jpeg' %}"  alt="" />
                        <div class="buttons">
                             <a href="/explore"><button>Explore</button></a>
@@ -198,7 +226,7 @@
                                 <a href="/reg"><button>Register</button></a>
                         </div>
     
-                    </div>
+                    </div> -->
     
                 </div>
             </div>
