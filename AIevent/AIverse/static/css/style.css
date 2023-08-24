@@ -747,6 +747,7 @@ width: 250%;
   height: fit-content;
   background-color: #131921 ;
   opacity: 0.8;
+  position: relative;
 }
 
 .footer-logo h1{
@@ -775,6 +776,43 @@ width: 250%;
   color: #ffffff;
   margin-top: 8px;
 }
+
+ .sociallinks{
+    width: fit-content;
+    position: absolute;
+    top: 70px;
+    right: 90px;
+    /* border: 1px solid red; */
+  }
+
+  .sociallinks h3{
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  .sociallinks a{
+    color: #ffffff;
+  }
+
+  .sociallinks a:hover{
+    color: #de005e;
+  }
+  
+  .contact{
+    position: absolute;
+    top: 70px;
+    right: 30rem;
+  }
+
+  .contact h3{
+    text-decoration: underline;
+    color: #ffffff;
+
+  }
+
+  .contact p{
+    color: #ffffff;
+  }
 
 
 @media screen and (max-width: 550px) {
@@ -877,5 +915,7 @@ width: 250%;
 
 
  }
+
+
 
 
