@@ -10,6 +10,8 @@ def index(request):
 def explore(request):
     return render(request, 'event/explore.html')
 
+
+
 def reg(request):
     return render(request, 'event/reg.html')
 
@@ -73,3 +75,52 @@ def payment(request):
 
         return redirect("index")
 
+
+#############################################################################################################
+# ADDING ROUUTINGS FOR ALL EVENT PAGES (HREF)
+#############################################################################################################
+
+# configuring the basic path
+import os  
+from pathlib import Path 
+from typing import List 
+
+path: Path = Path("event/events")
+
+EVENTS: List[str] = [  
+    "cubical_realm.html", 
+    "giga_gen.html", 
+    "beat_bots.html", 
+    "opti_ml.html", 
+    "startup_mela.html"
+    ]
+# Added for cubical realm event page display
+def cubical_realm(request) -> HttpResponse :
+    i : str= EVENTS[0]
+    cr: Path = os.path.join(path, i)
+    print(type(render(request, cr)))
+    return render(request, cr)
+
+# Added for Gigi Gen  event page display
+def giga_gen(request) -> HttpResponse:
+    i : str= EVENTS[1]
+    cr: Path = os.path.join(path, i)
+    return render(request, cr)
+
+# Added for Beat Bots event page display
+def beat_bots(request) -> HttpResponse: 
+    i : str = EVENTS[2]
+    cr: Path = os.path.join(path, i)
+    return render(request, cr)
+
+# Added for Opti Ml event page display
+def OptiML(request) -> HttpResponse :
+    i: str = EVENTS[3]
+    cr: Path = os.path.join(path, i)
+    return render(request, cr)
+
+# Added for Startup Mela event page display
+def ss(request) :
+    i : str = EVENTS[4]
+    cr: Path = os.path.join(path, i)
+    return render(request, cr)
