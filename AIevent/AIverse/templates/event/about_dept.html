@@ -20,17 +20,21 @@
     <header class="navbar nav-colored nav-transparent" id="navbar">
         <div class="header">
             <div id="logo">
-                <a href=" ">
+                <a href="#">
                     <h1>Artificial Intelligence</h1>
                 </a>
             </div>
             <div class="menu">
                 <ul class='menu-links'>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/login">ADMIN LOGIN</a></li>
-                    <li><a href="/reg">REGISTRATION</a></li>
+                    <li><a href="/" >HOME</a></li>
+                    <li><a href="/login" >ADMIN LOGIN</a></li>
+                    <li><a href="/reg" >REGISTRATION</a></li>
 
                 </ul>
+            </div>
+
+            <div class="home">
+                <a href="/">Home</a>
             </div>
 
         </div>
@@ -88,6 +92,46 @@
     </div>
 
     <!-- faculty details  -->
+    <div class="faculty-main-div">
+        <div class="faculty-heading">
+            <h2>Faculty Details</h2>
+        </div><br><br>
+
+        <div class="faculty">
+            <div class="image">
+                <img src="{% static 'Static_images/HOD_image.jpg' %}" alt="">
+            </div>
+
+            <div class="discription">
+                <h3>Mr. Vikas G. Bhowate</h3>
+                <p>Assistant Professor,</p>
+                <p>Incharge Of AI</p><br><br>
+
+                <h4 style="text-decoration: underline;">Education :</h4>
+            </div>
+            
+
+        </div><br><br>
+
+        <div class="faculty">
+            <div class="image">
+                <img src="{% static 'Static_images/pooja_1633585732.jpg' %}" alt="">
+            </div>
+
+            <div class="discription">
+                <h3>Mrs. Pooja B. Wagh</h3>
+                <p>Assistant Professor</p><br><br>
+                <h4 style="text-decoration: underline;">Education :</h4>
+
+            </div>
+            
+
+        </div>
+    </div>
+
+    <div class="button-div">
+        <a href="https://www.stvincentngp.edu.in/programs/artificial-intelligence" target="_blank" class="button">View more about department</a>
+    </div>
     
 </body>
 </html>
