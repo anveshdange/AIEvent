@@ -83,6 +83,7 @@ body{
 .button{
     margin-top: 6rem;
     margin-left: 5rem;
+    display: flex;
 }
 
 .button a{
