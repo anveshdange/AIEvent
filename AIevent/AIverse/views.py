@@ -78,6 +78,9 @@ def payment(request):
 def about(request):
     return render(request,"event/about_dept.html")
 
+# def cubical_realm(request):
+#     return render(request,"event/events/ccubical_realm.html")
+
 
 #############################################################################################################
 # ADDING ROUUTINGS FOR ALL EVENT PAGES (HREF)
