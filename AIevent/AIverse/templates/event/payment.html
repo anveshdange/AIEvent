@@ -33,13 +33,14 @@
 
 <body>
     <div class="main-div">
-        <p>Name: {{name}}</p>
-        <p>Contact: {{number}}</p>
-        <p>Branch: {{branch}}</p>
-        <p>Year: {{year}}</p>
-        <p>Email: {{email}}</p>
-        <p>Team: {{team_size}}</p>
-        <p>Event: {{event}}</p>
+
+            <p>Name: {{name}}</p>
+            <p>Contact: {{number}}</p>
+            <p>Branch: {{branch}}</p>
+            <p>Year: {{year}}</p>
+            <p>Email: {{email}}</p>
+            <p>Team: {{team_size}}</p>
+            <p>Event: {{event}}</p>
         <!-- Your form and other content here -->
         <form action="/payment/" method="post" enctype="multipart/form-data" class="payment-form">{% csrf_token %}
             <h1>Payment</h1><br>
@@ -59,17 +60,19 @@
             <label for="screenshot">Upload Payment Screenshot:</label><br><br>
             <h6 style="color: red;">* Uploading the Screenshot is Mandatory</h6><br>
             <input type="file" id="screenshot" name="screenshot" accept="image/*" onchange="enableSubmit()"><br> <br>
+            Enter the transaction-id: <br>
+            <input type="text" id="transaction-id" name="transaction-id" placeholder="Transaction-id"><br> <br>
             <button type="submit" id="submitBtn" disabled>Submit</button>
         </form>
     </div>
 
-<!--    <script>-->
-<!--        document.querySelector('.payment-form').addEventListener('submit', function(event) {-->
-<!--            event.preventDefault(); // Prevent the actual form submission for this example-->
-<!--            showSuccessMessage(); // Display the success message-->
-<!--            window.location.href = "";-->
-<!--        });-->
-<!--    </script>-->
+    <!--    <script>-->
+    <!--        document.querySelector('.payment-form').addEventListener('submit', function(event) {-->
+    <!--            event.preventDefault(); // Prevent the actual form submission for this example-->
+    <!--            showSuccessMessage(); // Display the success message-->
+    <!--            window.location.href = "";-->
+    <!--        });-->
+    <!--    </script>-->
 </body>
 
 </html>
