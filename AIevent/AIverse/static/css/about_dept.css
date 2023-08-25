@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    height: 200 vh;
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    background-color: #000000;
+}
+
+
+.header {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: green; */
+    /* border: 1px solid blue; */
+}
+
+#logo a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+
+
+
+.menu {
+    display: flex;
+    /* border: 1px solid red; */
+    width: auto;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.menu-links {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    width: auto;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.menu-links a::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: #ffffff;
+    display: block;
+    transition: .5s ease-in-out;
+}
+
+.menu-links a:hover::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    display: block;
+}
+
+/* about department style  */
+.about-dept{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 4rem ;
+    margin-top: 6rem;
+    /* border: 1px solid black; */
+    
+}
+
+.about-dept h2{
+    text-shadow: 2px 0px 4px rgba(0,0,0,0.41);
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+
+}
+
+.vision-mission{
+    width: fit-content;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.ourvision,.ourmission{
+    width: 30rem;
+    min-height: 18rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2rem;
+    /* border: 1px solid red; */
+} 
+
+.photo-message{
+    width: fit-content;
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.incharge-photo{
+    width: 16rem;
+    min-height: 23rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.incharge-message{
+    width: 44rem;
+    min-height: 23rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 1rem;
+}
+
+.incharge-message h3 {
+    font-size: 1.5rem;
+    text-shadow: 2px 0px 4px rgba(0,0,0,0.41);
+}
+
+.incharge-message p {
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.incharge-image{
+    width: 16rem;
+}
+
+.incharge-photo h4{
+    margin-top: 0.9rem;
+}
+
+@media screen and (max-width:1005px){
+
+    .ourvision,.ourmission{
+        width: 25rem;
+    }
+
+    .incharge-photo,.incharge-image{
+        width: 11rem;
+    }
+
+    .incharge-message{
+        width: 39rem;
+    }
+
+    .incharge-photo h4{
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 837px){
+
+    .vision-mission{
+        flex-direction: column;
+    }
+
+    .photo-message{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .incharge-photo,.incharge-image{
+        width: 16rem;
+    }
+
+    .incharge-message{
+        width: 25rem;
+    }
+
+
+}

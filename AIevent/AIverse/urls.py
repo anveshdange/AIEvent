@@ -12,6 +12,7 @@ urlpatterns = [
     path('logout/', views.handlelogout, name="logout"),
     path('payment/', views.payment, name="payment"),
     path('prepare-payment/', views.prepare_payment, name="prepare-payment"),
+    path('about-ai/',views.about, name="about-ai"),
     # events urls hrefs
     path('cubical_realm/', views.cubical_realm, name="cubical_realm"), 
     path('giga_gen/', views.giga_gen, name="giga_gen"),

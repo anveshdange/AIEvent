@@ -74,6 +74,9 @@ def payment(request):
         )
 
         return redirect("index")
+    
+def about(request):
+    return render(request,"event/about_dept.html")
 
 
 #############################################################################################################
