@@ -229,6 +229,18 @@ body{
     text-decoration: none;
 }
 
+table{
+    width: 100%;
+}
+
+th{
+    text-align: left;
+}
+
+th, td {
+	border-bottom: 1px solid black;
+}
+
 @media screen and (max-width:1005px){
 
     .ourvision,.ourmission{
@@ -284,6 +296,10 @@ body{
 
     .incharge-message{
         width: 25rem;
+    }
+
+    .faculty{
+        overflow-x: hidden;
     }
 
 
