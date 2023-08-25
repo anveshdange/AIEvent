@@ -124,3 +124,5 @@ def ss(request) :
     i : str = EVENTS[4]
     cr: Path = os.path.join(path, i)
     return render(request, cr)
+
+# this comment is for demo purpose of git pull for kaushal 
