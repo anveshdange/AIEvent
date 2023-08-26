@@ -3,6 +3,7 @@ from django.shortcuts import render,redirect
 from . models import AIverse
 from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail
+from django.core import serializers
 
 def index(request):
     return render(request, 'event/index.html')
@@ -22,7 +23,11 @@ def admin(request):
         user = authenticate(username=loginusername, password=loginpassword)
         if user is not None:
             login(request, user)
-            return render(request, 'event/master.html')
+            data = serializers.serialize("python", AIverse.objects.all())
+            details = {
+                'data': data
+            }
+            return render(request, 'event/master.html', details)
 
     return render(request, 'event/admin_login.html')
 
