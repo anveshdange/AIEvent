@@ -84,8 +84,20 @@ def payment(request):
 def about(request):
     return render(request,"event/about_dept.html")
 
-# def cubical_realm(request):
-#     return render(request,"event/events/ccubical_realm.html")
+def cr_reg(request):
+    return render(request, "event/cr_reg.html")
+
+def gg_reg(request):
+    return render(request, "event/gg_reg.html")
+
+def bb_reg(request):
+    return render(request, "event/bb_reg.html")
+
+def optiml_reg(request):
+    return render(request, "event/optiml_reg.html")
+
+def vv_reg(request):
+    return render(request, "event/vv_reg.html")
 
 
 #############################################################################################################

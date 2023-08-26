@@ -64,8 +64,8 @@
                 <label for="event">Event</label><br><br>
                 <select name="event" id="event" class="input-field" onchange="updateAmount()">
                     <option style="display: none;"></option>
-                    <option value="1">Cubic Realm</option>
-                    <option value="2">GigaGen</option>
+                    <option value="1">Cubic Realm (max_team_size=2)</option>
+                    <option value="2">GigaGen (max_team_size=4)</option>
                     <option value="3">BeatBots</option>
                     <option value="4">optiML</option>
                     <option value="5">VentureVista.AI
@@ -172,17 +172,26 @@
         const teamValue = teamSelect.value;
 
         let amount = 0;
-        if (eventValue === "2") {  // Event: GigaGen
+        if (eventValue === "1") {  // Event: GigaGen
             if (teamValue === "1") {
-                amount = 20;
+                amount = 70;
             } else if (teamValue === "2") {
-                amount = 30;
-            } else if (teamValue === "3") {
-                amount = 40;
-            } else if (teamValue === "4") {
-                amount = 50;
+                amount = 100;
             }
         }
+
+        if (eventValue === "2") {  // Event: GigaGen
+            if (teamValue === "1") {
+                amount = 50;
+            } else if (teamValue === "2") {
+                amount = 70;
+            } else if (teamValue === "3") {
+                amount = 100;
+            } else if (teamValue === "4") {
+                amount = 150;
+            }
+        }
+        
         // You can add similar conditions for other events here
 
         payButton.value = `Pay Rs.${amount} and Register`;
