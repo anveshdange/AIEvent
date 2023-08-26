@@ -62,8 +62,9 @@ def payment(request):
         team_size = request.POST.get('team_size')
         team_members = request.POST.get('team_member')
         screenshot = request.FILES["screenshot"]
+        transaction_ID = request.POST.get("transaction-id")
         AIverse_item = AIverse(Name=name, Event=event, Branch=branch, Year=year, Email=email, Contact=number,
-                               Team_Size=team_size, team_member=team_members, Transaction=screenshot)
+                               Team_Size=team_size, Team_member=team_members, Screenshot=screenshot, Transaction_ID=transaction_ID)
         AIverse_item.save()
         send_mail(
             "Testing Mail",
