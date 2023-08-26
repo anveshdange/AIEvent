@@ -68,7 +68,8 @@
                     <option value="2">GigaGen</option>
                     <option value="3">BeatBots</option>
                     <option value="4">optiML</option>
-                    <option value="5">VentureVista.AI<option>
+                    <option value="5">VentureVista.AI
+                    <option>
 
                 </select>
             </div>
@@ -86,12 +87,12 @@
 
 
 
-            <div id="team-member-names" class="team-member-names" >
+            <div id="team-member-names" class="team-member-names">
                 <!-- This is where dynamically created input fields will be appended -->
 
             </div>
             <div class="btn-pay">
-                    <input type="submit" value="Pay and Register" id="pay-button">
+                <input type="submit" value="Pay and Register" id="pay-button">
             </div>
         </form><br>
 
@@ -103,6 +104,17 @@
 
 </body>
 <script>
+
+    window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedEvent = urlParams.get('event');
+
+        if (selectedEvent) {
+            const eventSelect = document.getElementById('event');
+            eventSelect.value = selectedEvent;
+        }
+    };
+
 
     document.getElementById("team").addEventListener("change", function () {
         var selectedTeamSize = parseInt(this.value);
