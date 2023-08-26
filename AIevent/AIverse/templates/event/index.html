@@ -22,15 +22,15 @@
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <script>
         const nav = document.getElementById('navbar');
-        window.onscroll = function () { 
-        if (document.body.scrollTop >= 30 ||  document.documentElement.scrollTop >= 30 ) {
-            navbar.classList.add("nav-colored");
-            navbar.classList.remove("nav-transparent");
-        } 
-        else{
-            navbar.classList.add("nav-transparent");
-            navbar.classList.remove("nav-colored");
-        }
+        window.onscroll = function () {
+            if (document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30) {
+                navbar.classList.add("nav-colored");
+                navbar.classList.remove("nav-transparent");
+            }
+            else {
+                navbar.classList.add("nav-transparent");
+                navbar.classList.remove("nav-colored");
+            }
         };
     </script>
     <title>AIverse 1.0</title>
@@ -39,228 +39,243 @@
 
 <body>
 
-        <!-- header section  -->
-        <header class="navbar nav-colored nav-transparent" id="navbar">
-            <div class="header">
-                <div id="logo">
-                    <a href=""><h1> 1.0</h1></a>
-                </div>
-                <div class="menu">
-                    <ul class='menu-links'>
-                        <li><a href="/login">ADMIN LOGIN</a></li>
-                        <li><a href="/reg">REGISTRATION</a></li>
-
-                    </ul>
-                </div>
-
+    <!-- header section  -->
+    <header class="navbar nav-colored nav-transparent" id="navbar">
+        <div class="header">
+            <div id="logo">
+                <a href="">
+                    <h1>AIverse 1.0</h1>
+                </a>
             </div>
-        </header>
+            <div class="menu">
+                <ul class='menu-links'>
+                    <li><a href="/about-ai">About DE-AI</a></li>
+                    <li><a href="/login">ADMIN LOGIN</a></li>
+                    <li><a href="/reg">REGISTRATION</a></li>
 
-        <div class="reg">
-            <a href="/reg">REGISTRATION</a>
-        </div>
-
-        <!-- animations -->
-        <div class="stars">
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-        </div>
-
-        <!-- hero section  -->
-        <div class="intro">
-            <h1 class="intro-class">
-                <span class="heighlight1"> Welcome</span> 
-                <br>to the <br> 
-                <span class="heighlight2">AIverse 1.0</span>
-            </h1>
-
-            <div class="down-arrow">
-                <a href="#event"><i class="fa-solid fa-angle-down fa-2xl"></i></a>
+                </ul>
             </div>
 
         </div>
-        <!-- <hr class="hr-line1">  -->
-        <!-- event section -->
-        <div class="events-section">
-            <hr id="event">
-            <hr class="hr-line1">
-            <h1>EVENTS</h1>
+    </header>
 
-            <div class="slider">
-                <div class="slide-track">
+    <div class="reg">
+        <a href="/reg">REGISTRATION</a>
+    </div>
 
-                    <!-- Cubical Realm -->
-                    <div class="slide">
-                        <img src="{% static 'Static_images/beatbots.jpeg' %}"  alt="" />
-                       <div class="buttons">
-                            <a href="/cubical_realm"><button>Explore CR</button></a>
-                            <a href="/reg"><button>Register</button></a>
-                       </div>
+    <!-- animations -->
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <!-- hero section  -->
+    <div class="intro">
+        <h1 class="intro-class">
+            <span class="heighlight1"> Welcome</span>
+            <br>to the <br>
+            <span class="heighlight2">AIverse 1.0</span>
+        </h1>
+
+        <div class="down-arrow">
+            <a href="#event"><i class="fa-solid fa-angle-down fa-2xl"></i></a>
+        </div>
+
+    </div>
+    <!-- <hr class="hr-line1">  -->
+    <!-- event section -->
+    <div class="events-section">
+        <hr id="event">
+        <hr class="hr-line1">
+        <h1>EVENTS</h1>
+
+        <div class="slider">
+            <div class="slide-track">
+
+                <!-- Cubical Realm -->
+                <div class="slide">
+                    <img src="{% static 'Static_images/beatbots.jpeg' %}" alt="" />
+                    <div class="buttons">
+                        <a href="/cubical_realm"><button>Explore CR</button></a>
+                        <a href="/reg"><button>Register</button></a>
                     </div>
+                </div>
 
-                    <!-- Giga Gen  -->
-                    <div class="slide">
-                        <img src="{% static 'Static_images/beatbots.jpeg' %}" alt="" />
-                       <div class="buttons">
-                            <a href="/giga_gen"><button>Explore GG</button></a>
-                            <a href="/reg"><button>Register</button></a>
-                       </div>
-                        
-                    </div>
-                    
-                    <!-- Beat Bots -->
-                    <div class="slide">
-                        <img src="{% static 'Static_images/beatbots.jpeg' %}"  alt="" />
-                       <div class="buttons">
-                            <a href="/beat_bots"><button>Explore BB</button></a>
-                            <a href="/reg"><button>Register</button></a>
-                       </div>
-    
-                    </div>
-                    
-                    <!-- Opti ML -->
-                    <div class="slide">
-                        <img src="{% static 'Static_images/optiml.jpeg' %}"  alt="" />
-                       <div class="buttons">
-                            <a href="/opti_ml"><button>Explore O-ML</button></a>
-                            <a href="/reg"><button>Register</button></a>
-                       </div>
-    
-                    </div>
-
-                    <!-- Startup mela -->
-                    <div class="slide">
-                        <img src="{% static 'Static_images/venturevista.jpg' %}"  alt="" />
-                       <div class="buttons">
-                            <a href="/ss"><button>Explore VV</button></a>
-                            <a href="/reg"><button>Register</button></a>
-                       </div>
-    
-                    </div>
-
-                    <!-- Extra slides -->
-                     <div class="slide extra">
-                        <img src="{% static 'Static_images/beatbots.jpeg' %}"  alt="" />
-                       <div class="buttons">
-                            <a href="/explore"><button>Explore</button></a>
-                            <a href="/reg"><button>Register</button></a>
-                       </div>
-
-                    </div>
-                    <div class="slide extra">
-                        <img src="{% static 'Static_images/beatbots.jpeg' %}" alt="" />
-                       <div class="buttons">
-                            <a href="/explore"><button>Explore</button></a>
-                            <a href="/reg"><button>Register</button></a>
-                       </div>
-
-                    </div>
-                    <div class="slide extra">
-                        <img src="{% static 'Static_images/beatbots.jpeg' %}"alt="" />
-                       <div class="buttons">
-                            <a href="/explore"><button>Explore</button></a>
-                            <a href="/reg"><button>Register</button></a>
-                       </div>
-
-                    </div>
-                    <div class="slide extra">
-                        <img src="{% static 'Static_images/beatbots.jpeg' %}"  alt="" />
-                       <div class="buttons">
-                            <a href="/explore"><button>Explore</button></a>
-                            <a href="/reg"><button>Register</button></a>
-                       </div>
-
-                    </div>
-                    <div class="slide extra">
-                        <img src="{% static 'Static_images/venturevista.jpg' %}"  alt="" />
-                        <div class="buttons">
-                                <a href="/explore"><button>Explore</button></a>
-                                <a href="/reg"><button>Register</button></a>
-                        </div>
-
+                <!-- Giga Gen  -->
+                <div class="slide">
+                    <img src="{% static 'Static_images/beatbots.jpeg' %}" alt="" />
+                    <div class="buttons">
+                        <a href="/giga_gen"><button>Explore GG</button></a>
+                        <a href="/reg"><button>Register</button></a>
                     </div>
 
                 </div>
+
+                <!-- Beat Bots -->
+                <div class="slide">
+                    <img src="{% static 'Static_images/beatbots.jpeg' %}" alt="" />
+                    <div class="buttons">
+                        <a href="/beat_bots"><button>Explore BB</button></a>
+                        <a href="/reg"><button>Register</button></a>
+                    </div>
+
+                </div>
+
+                <!-- Opti ML -->
+                <div class="slide">
+                    <img src="{% static 'Static_images/optiml.jpeg' %}" alt="" />
+                    <div class="buttons">
+                        <a href="/opti_ml"><button>Explore O-ML</button></a>
+                        <a href="/reg"><button>Register</button></a>
+                    </div>
+
+                </div>
+
+                <!-- Startup mela -->
+                <div class="slide">
+                    <img src="{% static 'Static_images/venturevista.jpg' %}" alt="" />
+                    <div class="buttons">
+                        <a href="/ss"><button>Explore VV</button></a>
+                        <a href="/reg"><button>Register</button></a>
+                    </div>
+
+                </div>
+
+                <!-- Extra slides -->
+                <div class="slide extra">
+                    <img src="{% static 'Static_images/beatbots.jpeg' %}" alt="" />
+                    <div class="buttons">
+                        <a href="/cubical_realm"><button>Explore CR</button></a>
+                        <a href="/reg"><button>Register</button></a>
+                    </div>
+
+                </div>
+                <div class="slide extra">
+                    <img src="{% static 'Static_images/beatbots.jpeg' %}" alt="" />
+                    <div class="buttons">
+                        <a href="/giga_gen"><button>Explore GG</button></a>
+                        <a href="/reg"><button>Register</button></a>
+                    </div>
+
+                </div>
+                <div class="slide extra">
+                    <img src="{% static 'Static_images/beatbots.jpeg' %}" alt="" />
+                    <div class="buttons">
+                        <a href="/beat_bots"><button>Explore BB</button></a>
+                        <a href="/reg"><button>Register</button></a>
+                    </div>
+
+                </div>
+                <div class="slide extra">
+                    <img src="{% static 'Static_images/beatbots.jpeg' %}" alt="" />
+                    <div class="buttons">
+                        <a href="/opti_ml"><button>Explore O-ML</button></a>
+                        <a href="/reg"><button>Register</button></a>
+                    </div>
+
+                </div>
+                <div class="slide extra">
+                    <img src="{% static 'Static_images/venturevista.jpg' %}" alt="" />
+                    <div class="buttons">
+                        <a href="/explore"><button>Explore VV</button></a>
+                        <a href="/reg"><button>Register</button></a>
+                    </div>
+
+                </div>
+
             </div>
-    
-
-
-            <hr class="hr-line2">
         </div>
 
-        
-        <!-- footer section  -->
-        <footer class="footer">
-            <div class="footer-logo">
-                <h1>AIverse 1.0</h1>
+
+
+        <hr class="hr-line2">
+    </div>
+
+
+    <!-- footer section  -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <h1>AIverse 1.0</h1>
+        </div><br>
+
+        <div class="footer-content">
+            <div class="about">
+                <h3 style="text-decoration: underline;">About :</h3> 
+                <p></p><br>
+
             </div>
 
             <div class="contact">
-                <h3>Contact :</h3> <br>
+                <h3 style="text-decoration: underline;">Contact :</h3> <br>
                 <p>Anshula Mendhe: 7385869038</p>
-                <p>Harshad Kshirsagar: 9284224243</p>
-            </div>
+                <p>Harshad Kshirsagar: 9284224243</p><br>
+                <p><span style="text-decoration: underline;">Email : </span></p>
+            </div><br>
 
             <div class="sociallinks">
-                <h3>Social :</h3><br>
-                <a href="https://instagram.com/_ai_verse_1.0?igshid=MzRlODBiNWFlZA=="><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <h3 style="text-decoration: underline;">Social :</h3><br>
+                <a href="https://instagram.com/_ai_verse_1.0?igshid=MzRlODBiNWFlZA==" target="_blank"><i
+                        class="fa-brands fa-instagram fa-2xl"></i></a>
             </div>
+        </div>
 
 
-            <div class="c-line"></div>
-            <div class="copyright">
-                Copyright &copy;2023 | AIverse 1.0
-            </div>
-        </footer>
-    
+        <div class="c-line"></div>
+        <div class="copyright">
+            Copyright &copy;2023 | AIverse 1.0
+        </div>
+
+
+    </footer>
+
     <script src="{% static 'js/index.js' %}"></script>
 </body>
 

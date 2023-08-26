@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    height: 300vh;
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    background-color: #000000;
+}
+
+
+.header {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: green; */
+    /* border: 1px solid blue; */
+}
+
+#logo a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+
+
+
+.menu {
+    display: flex;
+    /* border: 1px solid red; */
+    width: auto;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.menu-links {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    width: auto;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.menu-links a::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: #ffffff;
+    display: block;
+    transition: .5s ease-in-out;
+}
+
+.menu-links a:hover::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    display: block;
+}
+
+.home{
+    color: white;
+    display: none;
+    /* border: 1px solid green; */
+    /* background-color: black; */
+    width: fit-content;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 6;
+    }
+    
+.home a{
+    color: #ffffff;
+    text-decoration: none;
+    }
+
+
+
+/* about department style  */
+.about-dept{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 4rem ;
+    margin-top: 6rem;
+    /* border: 1px solid black; */
+    
+}
+
+.about-dept h2{
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+
+}
+
+.vision-mission{
+    width: fit-content;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.ourvision,.ourmission{
+    width: 30rem;
+    min-height: 18rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    padding: 2rem;
+    /* border: 1px solid red; */
+} 
+
+.photo-message{
+    width: fit-content;
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.incharge-photo{
+    width: 16rem;
+    min-height: 23rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.incharge-message{
+    width: 44rem;
+    min-height: 23rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 1rem;
+}
+
+.incharge-message h3 {
+    font-size: 1.5rem;
+}
+
+.incharge-message p {
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.incharge-image{
+    width: 16rem;
+}
+
+.incharge-photo h4{
+    margin-top: 0.9rem;
+}
+
+/* faculty style  */
+.faculty-heading{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.faculty-main-div{
+    margin-top: 4rem;
+    /* border: 1px solid green; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: #dad4b1;
+}
+
+.faculty{
+    width: 65%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: fit-content;
+    background-color: #fff;
+    /* border: 1px solid black; */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+}
+
+.discription{
+    /* border: 1px solid green; */
+    width: 100%;
+    padding: 30px;
+}
+
+.button-div{
+    width: fit-content;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button{
+    padding: 10px;
+    border-radius: 2px;
+    background-color: black;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    text-align: left;
+}
+
+th, td {
+	border-bottom: 1px solid black;
+}
+
+@media screen and (max-width:1005px){
+
+    .ourvision,.ourmission{
+        width: 25rem;
+    }
+
+    .incharge-photo,.incharge-image{
+        width: 11rem;
+    }
+
+    .incharge-message{
+        width: 39rem;
+    }
+
+    .incharge-photo h4{
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 550px){
+
+    .menu{
+        display: none;
+    }
+
+    .home{
+        display: block;
+    }
+
+    .faculty{
+        flex-direction: column;
+        width: 77%;
+    }
+
+    #logo a h1{
+        font-size: 25px;
+    }
+
+
+    .vision-mission{
+        flex-direction: column;
+    }
+
+    .photo-message{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .incharge-photo,.incharge-image{
+        width: 16rem;
+    }
+
+    .incharge-message{
+        width: 25rem;
+    }
+
+    .faculty{
+        overflow-x: hidden;
+    }
+
+
+}
+

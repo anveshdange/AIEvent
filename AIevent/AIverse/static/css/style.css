@@ -747,7 +747,6 @@ width: 250%;
   height: fit-content;
   background-color: #131921 ;
   opacity: 0.8;
-  position: relative;
 }
 
 .footer-logo h1{
@@ -777,42 +776,39 @@ width: 250%;
   margin-top: 8px;
 }
 
- .sociallinks{
-    width: fit-content;
-    position: absolute;
-    top: 70px;
-    right: 90px;
-    /* border: 1px solid red; */
-  }
+.footer-content{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+}
 
-  .sociallinks h3{
-    color: #ffffff;
-    text-decoration: underline;
-  }
+.about h3{
+  color: #ffffff;
+}
 
-  .sociallinks a{
-    color: #ffffff;
-  }
+.contact h3{
+  color: #ffffff;
+}
 
-  .sociallinks a:hover{
-    color: #de005e;
-  }
-  
-  .contact{
-    position: absolute;
-    top: 70px;
-    right: 30rem;
-  }
+.contact p , .sociallinks p {
+  color: rgb(255, 255, 255);
+}
 
-  .contact h3{
-    text-decoration: underline;
-    color: #ffffff;
+.sociallinks h3{
+  color: #ffffff;
+}
 
-  }
+.sociallinks a{
+  color: #ffffff;
+} 
 
-  .contact p{
-    color: #ffffff;
-  }
+.sociallinks a:hover{
+  color: #de005e;
+}
+
+
+ 
 
 
 @media screen and (max-width: 550px) {
@@ -844,6 +840,10 @@ width: 250%;
 .menu{
   display: none;
   
+}
+
+.heighlight2{
+  font-size: 70px;
 }
 
 .reg{
@@ -910,6 +910,11 @@ width: 250%;
     opacity: 0.8;
     margin-top: 4rem;
     /* border: 1px solid red; */
+  }
+
+  .footer-content{
+    flex-direction: column;
+    padding-left: 40px;
   }
 
 

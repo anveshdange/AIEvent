@@ -45,7 +45,7 @@ body{
 
 .event{
     width: 100%;
-    height:100%;
+    height:fit-content;
     padding: 15px;
     padding-bottom: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -145,30 +145,21 @@ body{
 
 }
 
-.reg-btn-right{
-    padding: 8px 18px;
-    text-decoration: none;
-    background-color: white;
-    color: #0d1116;
-    border-radius: 2px;
-    position: absolute;
-    bottom: 10px; 
-    right: 50px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
+.buttons{
+    width: 100%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding-right: 40px;
 }
 
-.reg-btn-left{
-    padding: 8px 18px;
+.buttons a{
     text-decoration: none;
-    background-color: white;
-    color: #0d1116;
-    border-radius: 2px;
-    position: relative;
-    bottom: 0px;
-    right: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 10px;
 }
 
 @media screen and (max-width: 550px){

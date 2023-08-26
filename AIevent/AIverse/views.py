@@ -74,6 +74,12 @@ def payment(request):
         )
 
         return redirect("index")
+    
+def about(request):
+    return render(request,"event/about_dept.html")
+
+# def cubical_realm(request):
+#     return render(request,"event/events/ccubical_realm.html")
 
 
 #############################################################################################################
