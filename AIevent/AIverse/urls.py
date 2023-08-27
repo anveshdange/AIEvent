@@ -13,6 +13,11 @@ urlpatterns = [
     path('payment/', views.payment, name="payment"),
     path('prepare-payment/', views.prepare_payment, name="prepare-payment"),
     path('about-ai/',views.about, name="about-ai"),
+    path('cr/',views.cr_reg, name='cr_reg'),
+    path('gg/',views.gg_reg, name='gg_reg'),
+    path('bb/',views.bb_reg, name='bb_reg'),
+    path('optiml/',views.optiml_reg, name='optiml_reg'),
+    path('vv/',views.vv_reg, name='vv_reg'),
     # events urls hrefs
     path('cubical_realm/', views.cubical_realm, name="cubical_realm"), 
     path('giga_gen/', views.giga_gen, name="giga_gen"),
