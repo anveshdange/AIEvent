@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from . models import AIverse
 from django.contrib.auth import authenticate, login, logout
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 from django.core import serializers
 
 def index(request):
@@ -56,6 +56,7 @@ def prepare_payment(request):
         team_members += "," + member4
     payment_data = {'name': name, 'number': number, 'email': email, 'branch': branch, 'year': year, 'event': event,'team_size': team_size, 'team_members':team_members}
     return render(request, 'event/payment.html', payment_data)
+
 def payment(request):
     if request.method == "POST":
         name = request.POST.get('name')
@@ -71,10 +72,18 @@ def payment(request):
         AIverse_item = AIverse(Name=name, Event=event, Branch=branch, Year=year, Email=email, Contact=number,
                                Team_Size=team_size, Team_member=team_members, Screenshot=screenshot, Transaction_ID=transaction_ID)
         AIverse_item.save()
+       
+        from typing import List 
+        p : List[str] = [
+            f"Hi, {name}\nYou have succesfully registered for the \"{event}\" event.\nHere are the workshop details of cubic realm:\ntime:  9:00 pm\nvenue: home\n{screenshot}" , "second event", "third event", "fourth event", "fifth event"
+        ]
+        if (event == "Cubic Realm") : l : str = p[0]
+        else: l: str = "not cubic realm"
+        
         send_mail(
-            "Testing Mail",
-            "Registration Successfull",
-            "malharramteke.21@stvincentngp.edu.in",
+            f"{event} Registration Succesfull",
+            l,
+            "svpcetaiverse@gmail.com",
             [email],
             fail_silently=False,
         )
@@ -85,19 +94,29 @@ def about(request):
     return render(request,"event/about_dept.html")
 
 def cr_reg(request):
-    return render(request, "event/cr_reg.html")
+    data = serializers.serialize("python", AIverse.objects.all().filter(Event="Cubic Realm"))
+    dictionary_lol = {"data": data}
+    return render(request, "event/cr_reg.html", dictionary_lol)
 
 def gg_reg(request):
-    return render(request, "event/gg_reg.html")
+    data = serializers.serialize("python", AIverse.objects.all().filter(Event="GigaGen"))
+    dictionary_lol = {"data": data}
+    return render(request, "event/gg_reg.html", dictionary_lol)
 
 def bb_reg(request):
-    return render(request, "event/bb_reg.html")
+    data = serializers.serialize("python", AIverse.objects.all().filter(Event="BeatBots"))
+    dictionary_lol = {"data": data}
+    return render(request, "event/bb_reg.html", dictionary_lol)
 
 def optiml_reg(request):
-    return render(request, "event/optiml_reg.html")
+    data = serializers.serialize("python", AIverse.objects.all().filter(Event="optiML"))
+    dictionary_lol = {"data": data}
+    return render(request, "event/optiml_reg.html", dictionary_lol)
 
 def vv_reg(request):
-    return render(request, "event/vv_reg.html")
+    data = serializers.serialize("python", AIverse.objects.all().filter(Event="VentureVista.AI"))
+    dictionary_lol = {"data": data}
+    return render(request, "event/vv_reg.html", dictionary_lol)
 
 # def cubical_realm(request):
 #     return render(request,"event/events/ccubical_realm.html")
