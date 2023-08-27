@@ -36,9 +36,24 @@
             <th>ScreeShot</th>
             <th>Transaction ID</th>
             <th>Date</th>
-            <th>Signature</th>
             <th>Event</th>
+            <th>Signature</th>
         </tr>
+        {% for i in data %} 
+        <tr>
+            <td>{{i.fields.Name}}</td>
+            <td>{{i.fields.Branch}}</td>
+            <td>{{i.fields.Year}}</td>
+            <td>{{i.fields.Email}}</td>
+            <td>{{i.fields.Contact}}</td>
+            <td>{{i.fields.Team_Size}}</td>
+            <td>{{i.fields.Team_member}}</td>
+            <td>{{i.fields.Screenshot}}</td>  <!-- <img src='/media/{{i.fields.Screenshot}}'>-->
+            <td>{{i.fields.Transaction_ID}}</td>
+            <td>{{i.fields.Date}}</td>
+            <td>{{i.fields.Event}}</td>
+        </tr> 
+        {% endfor %}
     </table>
 </body>
 </html>
