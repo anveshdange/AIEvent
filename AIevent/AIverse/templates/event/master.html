@@ -60,6 +60,7 @@
             <th>Date</th>
             <th>Signature</th>
         </tr>
+        
          {% for i in data %}
         <tr>
             <td>{{i.fields.Name}}</td>
@@ -70,7 +71,7 @@
             <td>{{i.fields.Contact}}</td>
             <td>{{i.fields.Team_Size}}</td>
             <td>{{i.fields.Team_member}}</td>
-            <td>{{i.fields.Screenshot}}</td>  <!-- <img src='/media/{{i.fields.Screenshot}}'>-->
+            <td><img src='/media/{{i.fields.Screenshot}}' style="width: 200px;height:260px"></td>
             <td>{{i.fields.Transaction_ID}}</td>
             <td>{{i.fields.Date}}</td>
             <td></td>
