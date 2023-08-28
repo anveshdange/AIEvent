@@ -24,6 +24,13 @@ def admin(request):
         if user is not None:
             login(request, user)
             data = serializers.serialize("python", AIverse.objects.all())
+            # print(data)
+            # print(type(data))
+            for i in data:
+                p = i['fields']['Team_member']
+                p = p.replace(",", ",\n")
+                i['fields']['Team_member'] = p 
+
             details = {
                 'data': data
             }
@@ -49,11 +56,11 @@ def prepare_payment(request):
     if member1 is not None:
         team_members = member1
     if member2 is not None:
-        team_members += "," + member2
+        team_members += f"\n{member2}"
     if member3 is not None:
-        team_members += "," + member3
+        team_members += f"\n{member3}"
     if member4 is not None:
-        team_members += "," + member4
+        team_members += f"\n{member4}"
     payment_data = {'name': name, 'number': number, 'email': email, 'branch': branch, 'year': year, 'event': event,'team_size': team_size, 'team_members':team_members}
     return render(request, 'event/payment.html', payment_data)
 

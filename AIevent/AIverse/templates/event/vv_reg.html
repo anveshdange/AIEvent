@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/vv_reg.css' %}">
     <title>VV registration</title>
+    <link rel="icon" type="images/x-icon" href="{% static 'Static_images\AIverse_logo.png' %}" />
+
 </head>
 <body>
     <header class="navbar">
@@ -23,6 +25,11 @@
 
         </div>
     </header>
+
+    <div class="event-heading">
+        <h2 style="text-decoration: underline;">AIVERSE</h2>
+        <h3 style="text-decoration: underline;">Registration For VentureVista.AI</h3>
+    </div><br>
 
     <table class="table">
         <tr>
@@ -52,6 +59,7 @@
             <td>{{i.fields.Transaction_ID}}</td>
             <td>{{i.fields.Date}}</td>
             <td>{{i.fields.Event}}</td>
+            <td></td>
         </tr> 
         {% endfor %}
     </table>

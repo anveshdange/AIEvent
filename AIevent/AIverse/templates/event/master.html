@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Master page</title>
+    <link rel="icon" type="images/x-icon" href="{% static 'Static_images\AIverse_logo.png' %}" />
+
 </head>
 
 <body>
@@ -38,6 +40,11 @@
         <a href="/vv">Registration - VV</a>
     </div><br>
 
+    <div class="event-heading">
+        <h2 style="text-decoration: underline;">AIVERSE</h2>
+        <h3 style="text-decoration: underline;">Registration For All Events</h3>
+    </div><br>
+
     <table class="table">
         <tr>
             <th>Name</th>
@@ -51,8 +58,9 @@
             <th>ScreeShot</th>
             <th>Transaction ID</th>
             <th>Date</th>
-             <th>Signature</th>
+            <th>Signature</th>
         </tr>
+        
          {% for i in data %}
         <tr>
             <td>{{i.fields.Name}}</td>
@@ -63,9 +71,10 @@
             <td>{{i.fields.Contact}}</td>
             <td>{{i.fields.Team_Size}}</td>
             <td>{{i.fields.Team_member}}</td>
-            <td>{{i.fields.Screenshot}}</td>  <!-- <img src='/media/{{i.fields.Screenshot}}'>-->
+            <td><img src='/media/{{i.fields.Screenshot}}' style="width: 200px;height:260px"></td>
             <td>{{i.fields.Transaction_ID}}</td>
             <td>{{i.fields.Date}}</td>
+            <td></td>
         </tr>
         {% endfor %}
     </table>
