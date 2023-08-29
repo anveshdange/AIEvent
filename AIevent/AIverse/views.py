@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from . models import AIverse
 from django.contrib.auth import authenticate, login, logout
-from django.core.mail import send_mail, EmailMessage
+from django.core.mail import send_mail, EmailMessage, EmailMultiAlternatives
 from django.core import serializers
 
 def index(request):
@@ -75,6 +75,7 @@ def payment(request):
         team_size = request.POST.get('team_size')
         team_members = request.POST.get('team_member')
         screenshot = request.FILES["screenshot"]
+        print(screenshot)
         transaction_ID = request.POST.get("transaction-id")
         AIverse_item = AIverse(Name=name, Event=event, Branch=branch, Year=year, Email=email, Contact=number,
                                Team_Size=team_size, Team_member=team_members, Screenshot=screenshot, Transaction_ID=transaction_ID)
@@ -86,14 +87,28 @@ def payment(request):
         ]
         if (event == "Cubic Realm") : l : str = p[0]
         else: l: str = "not cubic realm"
-        
-        send_mail(
+
+        # send_mail(
+        #     f"{event} Registration Succesfull",
+        #     l,
+        #     "svpcetaiverse@gmail.com",
+        #     [email],
+        #     fail_silently=False,
+        # )
+        msg = EmailMessage(
             f"{event} Registration Succesfull",
             l,
             "svpcetaiverse@gmail.com",
             [email],
-            fail_silently=False,
+
         )
+        msg.attach(
+            screenshot.name,
+            screenshot.read(),
+            screenshot.content_type
+        )
+        msg.send()
+
 
         return redirect("index")
     
