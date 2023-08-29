@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail, EmailMessage, EmailMultiAlternatives
 from django.core import serializers
 
+import magic
+
 def index(request):
     return render(request, 'event/index.html')
 
@@ -102,10 +104,15 @@ def payment(request):
             [email],
 
         )
+
+        with open(f"./media/Event/images/{screenshot}", 'rb') as file: file_content = file.read()
+        mime_type = magic.from_buffer(file_content, mime=True)
+
+
         msg.attach(
             screenshot.name,
-            screenshot.read(),
-            screenshot.content_type
+            file_content, 
+            mime_type
         )
         msg.send()
 
