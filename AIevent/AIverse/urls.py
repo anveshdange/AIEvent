@@ -18,7 +18,12 @@ urlpatterns = [
     path('bb/',views.bb_reg, name='bb_reg'),
     path('optiml/',views.optiml_reg, name='optiml_reg'),
     path('vv/',views.vv_reg, name='vv_reg'),
-    
+    path('gg_back/', views.gg_back, name='gg_back'),
+    path('cr_back/', views.cr_back, name='cr_back'),
+    path('bb_back/', views.bb_back, name='bb_back'),
+    path('optiml_back/', views.optiml_back, name='optiml_back'),
+    path('vv_back/', views.vv_back, name='vv_back'),
+
     # events urls hrefs
     path('cubical_realm/', views.cubical_realm, name="cubical_realm"), 
     path('giga_gen/', views.giga_gen, name="giga_gen"),

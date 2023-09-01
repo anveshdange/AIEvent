@@ -126,26 +126,38 @@ def cr_reg(request):
     data = serializers.serialize("python", AIverse.objects.all().filter(Event="Cubic Realm"))
     dictionary_lol = {"data": data}
     return render(request, "event/cr_reg.html", dictionary_lol)
+def cr_back(request):
+    return render(request, 'event/master.html')
 
 def gg_reg(request):
     data = serializers.serialize("python", AIverse.objects.all().filter(Event="GigaGen"))
     dictionary_lol = {"data": data}
     return render(request, "event/gg_reg.html", dictionary_lol)
 
+def gg_back(request):
+    return render(request, 'event/master.html')
+
 def bb_reg(request):
     data = serializers.serialize("python", AIverse.objects.all().filter(Event="BeatBots"))
     dictionary_lol = {"data": data}
     return render(request, "event/bb_reg.html", dictionary_lol)
 
+def bb_back(request):
+    return render(request, 'event/master.html')
+
 def optiml_reg(request):
     data = serializers.serialize("python", AIverse.objects.all().filter(Event="optiML"))
     dictionary_lol = {"data": data}
     return render(request, "event/optiml_reg.html", dictionary_lol)
+def optiml_back(request):
+    return render(request, 'event/master.html')
 
 def vv_reg(request):
     data = serializers.serialize("python", AIverse.objects.all().filter(Event="VentureVista.AI"))
     dictionary_lol = {"data": data}
     return render(request, "event/vv_reg.html", dictionary_lol)
+def vv_back(request):
+    return render(request, 'event/master.html')
 
 # def cubical_realm(request):
 #     return render(request,"event/events/ccubical_realm.html")
