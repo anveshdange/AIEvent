@@ -43,6 +43,7 @@ def admin(request):
 def handlelogout(request):
     logout(request)
     return redirect("index")
+
 def prepare_payment(request):
     name = request.POST.get('name')
     number = request.POST.get('contact')
