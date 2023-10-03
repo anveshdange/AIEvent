@@ -105,7 +105,7 @@ body{
     align-items: center;
 }
 
-.text-right h2{
+.text-right h2 {
     background: linear-gradient(135deg, #879af2 0%, #d3208b 10%, #fda000 20% );
     background-size: 400%;
     background-clip: text;
