@@ -12,14 +12,19 @@ body{
 }
 
 .main-poster{
-    width: 90%;
-    height: 40vh;
+    width: 60%;
+    height: fit-content;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     background-color:#14191f;
+    padding: 10px;
     margin-left:auto;
     margin-right: auto;
     margin-top: 40px;
     border-radius: 8px;
+}
+
+.main-poster img{
+    width: 100%;
 }
 
 .heading{
@@ -159,6 +164,9 @@ body{
 }
 
 @media screen and (max-width: 550px){
+    .main-poster{
+        width: 90%;
+    }
     .event{
         height: fit-content;
         flex-direction: column;
