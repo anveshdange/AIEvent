@@ -85,6 +85,9 @@ body{
     border-bottom-right-radius: 8px;
     padding: 2px 15px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .text-right h2{
@@ -124,6 +127,8 @@ body{
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     padding: 2px 15px;
+    display: flex;
+    flex-direction: column;
 
 }
 
