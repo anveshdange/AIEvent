@@ -174,25 +174,48 @@
         const teamValue = teamSelect.value;
 
         let amount = 0;
-        if (eventValue === "Cubic Realm") {  // Event: GigaGen
+        if (eventValue === "Cubic Realm") {  // Event: Cubic realm
             if (teamValue === "1") {
                 amount = 70;
+                payButton.disabled = false;
+
             } else if (teamValue === "2") {
                 amount = 100;
+                payButton.disabled = false;
+
+            } else if (teamValue === "3") {
+                payButton.disabled = true;
+                alert("Maximum 2 members are allowed in this event");
+            } else if (teamValue === "4") {
+                payButton.disabled = true;
+                alert("Maximum 2 members are allowed in this event");
+
             }
+
         }
 
         if (eventValue === "GigaGen") {  // Event: GigaGen
             if (teamValue === "1") {
                 amount = 50;
+                payButton.disabled = false;
+
             } else if (teamValue === "2") {
                 amount = 100;
+                payButton.disabled = false;
+
+            } else if (teamValue === "3") {
+                payButton.disabled = true;
+                alert("Team size should be 1,2 and 4. Please select accordingly");
+
+
             } else if (teamValue === "4") {
                 amount = 150;
+                payButton.disabled = false;
+
             } 
         }
 
-        if (eventValue === "optiML") {  // Event: GigaGen
+        if (eventValue === "optiML") {  // Event: Optiml
             if (teamValue === "1") {
                 amount = 50;
             } else if (teamValue === "2") {
