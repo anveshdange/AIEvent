@@ -43,7 +43,7 @@
             <p>Email: {{email}}</p>
             <p>Team: {{team_size}}</p>
             <p>Event: {{event}}</p>
-            <p>Amount: </p>
+            <p>Amount: {{amount}}</p>
 
         <!-- Your form and other content here -->
         <form action="/payment/" method="post" enctype="multipart/form-data" class="payment-form">{% csrf_token %}
@@ -58,7 +58,7 @@
             <input type="hidden" class="input-field" name="event" value="{{event}}">
             <input type="hidden" class="input-field" name="team_size" value="{{team_size}}">
             <input type="hidden" class="input-field" name="team_member" value="{{team_members}}">
-            <input type="hidden" class="input-field" name="amount" value="">
+            <input type="hidden" class="input-field" name="amount" value="{{amount}}">
 
 
 

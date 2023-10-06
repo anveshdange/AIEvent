@@ -52,6 +52,7 @@ def prepare_payment(request):
     year = request.POST.get('Year')
     event = request.POST.get('event')
     team_size = request.POST.get('team')
+    amount = request.POST.get('amount')
     member1 = request.POST.get('1')
     member2 = request.POST.get('2')
     member3 = request.POST.get('3')
@@ -64,7 +65,7 @@ def prepare_payment(request):
         team_members += f"\n{member3}"
     if member4 is not None:
         team_members += f"\n{member4}"
-    payment_data = {'name': name, 'number': number, 'email': email, 'branch': branch, 'year': year, 'event': event,'team_size': team_size, 'team_members':team_members}
+    payment_data = {'name': name, 'number': number, 'email': email, 'branch': branch, 'year': year, 'event': event,'team_size': team_size, 'team_members':team_members, 'amount':amount}
     return render(request, 'event/payment.html', payment_data)
 
 def payment(request):
@@ -77,11 +78,12 @@ def payment(request):
         event = request.POST.get('event')
         team_size = request.POST.get('team_size')
         team_members = request.POST.get('team_member')
+        amount = request.POST.get('amount')
         screenshot = request.FILES["screenshot"]
         print(screenshot)
         transaction_ID = request.POST.get("transaction-id")
         AIverse_item = AIverse(Name=name, Event=event, Branch=branch, Year=year, Email=email, Contact=number,
-                               Team_Size=team_size, Team_member=team_members, Screenshot=screenshot, Transaction_ID=transaction_ID)
+                               Team_Size=team_size, Team_member=team_members, Screenshot=screenshot, Transaction_ID=transaction_ID, amount=amount)
         AIverse_item.save()
        
         from typing import List 

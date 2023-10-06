@@ -9,6 +9,7 @@ class AIverse(models.Model):
     Email = models.EmailField(max_length=30)
     Contact = models.CharField(max_length=10)
     Team_Size = models.CharField(max_length=10)
+    amount = models.CharField(max_length=10)
     Team_member = models.CharField(max_length=100, null=True)
     Screenshot = models.ImageField(upload_to="Event/images", null=True)
     Transaction_ID = models.CharField(max_length=40)
