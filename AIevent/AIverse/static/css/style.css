@@ -20,10 +20,11 @@ body{
 
 /* Additional styles for the navbar animation  */
 .nav-colored { 
-  background-color:#000; 
-  transition: background-color 700ms linear;
+  background-color: #0d1116;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+  transition: background-color 100ms linear;
 }
-.nav-transparent { background-color:transparent;}
+/* .nav-transparent { background-color:transparent;} */
 
 
 .header{
@@ -879,8 +880,13 @@ width: 250%;
 .reg{
   display: block;
   /* justify-content: center; */
+  border: 1px solid yellow;
   
 }
+
+
+
+
 
 
   .intro-class{

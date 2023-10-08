@@ -167,6 +167,9 @@ def vv_reg(request):
 def vv_back(request):
     return render(request, 'event/master.html')
 
+def team(request):
+    return render (request, "event/team.html")
+
 # def cubical_realm(request):
 #     return render(request,"event/events/ccubical_realm.html")
 
