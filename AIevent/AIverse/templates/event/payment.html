@@ -48,7 +48,7 @@
         <!-- Your form and other content here -->
         <form action="/payment/" method="post" enctype="multipart/form-data" class="payment-form">{% csrf_token %}
             <h1>Payment</h1><br>
-            <img src="{% static 'Static_images/QR.jfif' %}" alt="payment qr" id="QR"><br><br>
+            <img src="{% static 'Static_images/event_payment_QR.jpeg' %}" alt="payment qr" id="QR"><br><br>
 
             <input type="hidden" class="input-field" name="name" value="{{name}}">
             <input type="hidden" class="input-field" name="contact" value="{{number}}">
