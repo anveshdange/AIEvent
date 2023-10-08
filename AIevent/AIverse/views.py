@@ -85,13 +85,19 @@ def payment(request):
         AIverse_item = AIverse(Name=name, Event=event, Branch=branch, Year=year, Email=email, Contact=number,
                                Team_Size=team_size, Team_member=team_members, Screenshot=screenshot, Transaction_ID=transaction_ID, amount=amount)
         AIverse_item.save()
-       
-        from typing import List 
-        p : List[str] = [
-            f"Hi, {name}\nYou have succesfully registered for the \"{event}\" event.\nHere are the workshop details of cubic realm:\ntime:  9:00 pm\nvenue: home\n{screenshot}" , "second event", "third event", "fourth event", "fifth event"
+
+        from typing import List
+        p: List[str] = [
+            f"Hi, {name}\nYou have succesfully registered for the \"{event}\" event.\nHere are the workshop details of cubic realm:\ntime:  9:00 pm\nvenue: home\n{screenshot}",
+            f"Hi, {name}\n\n We are thrilled to welcome you to our event OptiML and workshop happening on November 4th, 2023. Get ready for an exciting day of learning and hands-on experience with Machine Learning(ML) Algorithms.\n\nEvent Details:\n - Date: November 4th, 2023\n\nWorshop Details:\nOur worshop will dive deep into the world of ML. Here's what you can expect:\n - Gain hands on experience with Ml Algorithms\n - Learn how to harness the power of Python libraries like NumPy, Pandas and Matplotlib.\n - Explore real-world application of ML\n\nPre-Requisites:\nWhile prior Experience is not mandatory, a little knowledge of Python libraries like NumPy, Pandas and Matplotlib would be appreciated to make the most of the workshop.\nGet ready for a day of innovation, collaboration and skill-building. We can't wait to see you there ! \n\n\nBest Regards,\nAnvesh Khambadkar\nCo-Ordinator OptiML",
+            "third event", "fourth event", "fifth event"
         ]
-        if (event == "Cubic Realm") : l : str = p[0]
-        else: l: str = "not cubic realm"
+        if (event == "Cubic Realm"):
+            l: str = p[0]
+        elif (event == "optiML"):
+            l: str = p[1]
+        else:
+            l: str = "not cubic realm"
 
         # send_mail(
         #     f"{event} Registration Succesfull",
@@ -108,17 +114,16 @@ def payment(request):
 
         )
 
-        with open(f"./media/Event/images/{screenshot}", 'rb') as file: file_content = file.read()
+        with open(f"./media/Event/images/{screenshot}", 'rb') as file:
+            file_content = file.read()
         mime_type = magic.from_buffer(file_content, mime=True)
-
 
         msg.attach(
             screenshot.name,
-            file_content, 
+            file_content,
             mime_type
         )
         msg.send()
-
 
         return redirect("index")
     
