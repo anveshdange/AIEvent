@@ -205,12 +205,12 @@
 
             } else if (teamValue === "3") {
                 payButton.disabled = true;
-                alert("Team size should be 1,2 and 4. Please select accordingly");
+                alert("Team size should be 1 and 2. Please select accordingly");
 
 
             } else if (teamValue === "4") {
-                amount = 150;
-                payButton.disabled = false;
+                payButton.disabled = true;
+                alert("Team size should be 1 and 2. Please select accordingly");
 
             } 
         }
@@ -244,6 +244,20 @@
             } else if (teamValue === "4") {
                  payButton.disabled = true;
                 alert("Team size should be 1 and 2. Please select accordingly");
+            }
+        }
+
+        if (eventValue === "VentureVista.AI") {  // Event: Optiml
+            if (teamValue === "1") {
+                amount = 70;
+
+            } else if (teamValue === "2") {
+                amount = 100;
+
+            } else if (teamValue === "3") {
+               amount = 200;
+            } else if (teamValue === "4") {
+                amount = 200;
             }
         }
         // You can add similar conditions for other events here
