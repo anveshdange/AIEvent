@@ -742,6 +742,14 @@ transition: width 1000ms;
 width: 250%;
 }
 
+.teaser{
+    margin-top: 20rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
 
 
 

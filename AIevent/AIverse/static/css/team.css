@@ -8,6 +8,7 @@
 
 body{
     overflow-x: hidden;
+    background-color: #0d1116;
 }
 
 
@@ -136,6 +137,7 @@ body{
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: larger;
+    color: #ffffff;
     text-decoration: underline;
   }
 
@@ -175,6 +177,7 @@ body{
 
   .event-heading h2{
     text-decoration: underline;
+    color: #ffffff;
   }
 
   .ailogo-team {
@@ -327,7 +330,7 @@ body{
   }
 
   .reg a{
-    color: #131921;
+    color: #ffffff;
     font-weight: 700;
   }
 
