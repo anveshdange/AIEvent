@@ -23,6 +23,8 @@ urlpatterns = [
     path('bb_back/', views.bb_back, name='bb_back'),
     path('optiml_back/', views.optiml_back, name='optiml_back'),
     path('vv_back/', views.vv_back, name='vv_back'),
+    path('team/', views.team, name='team'),
+
 
     # events urls hrefs
     path('cubical_realm/', views.cubical_realm, name="cubical_realm"), 
