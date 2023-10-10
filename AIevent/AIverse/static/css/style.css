@@ -888,7 +888,7 @@ width: 250%;
 .reg{
   display: block;
   /* justify-content: center; */
-  border: 1px solid yellow;
+
   
 }
 
@@ -941,6 +941,7 @@ width: 250%;
 
   .slide img{
     width: 100%;
+    height: 225px;
   }
 
   .extra{
