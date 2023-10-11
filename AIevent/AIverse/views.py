@@ -88,16 +88,22 @@ def payment(request):
 
         from typing import List
         p: List[str] = [
-            f"Hi, {name}\nYou have succesfully registered for the \"{event}\" event.\nHere are the workshop details of cubic realm:\ntime:  9:00 pm\nvenue: home\n{screenshot}",
-            f"Hi, {name}\n\n We are thrilled to welcome you to our event OptiML and workshop happening on November 4th, 2023. Get ready for an exciting day of learning and hands-on experience with Machine Learning(ML) Algorithms.\n\nEvent Details:\n - Date: November 4th, 2023\n\nWorshop Details:\nOur worshop will dive deep into the world of ML. Here's what you can expect:\n - Gain hands on experience with Ml Algorithms\n - Learn how to harness the power of Python libraries like NumPy, Pandas and Matplotlib.\n - Explore real-world application of ML\n\nPre-Requisites:\nWhile prior Experience is not mandatory, a little knowledge of Python libraries like NumPy, Pandas and Matplotlib would be appreciated to make the most of the workshop.\nGet ready for a day of innovation, collaboration and skill-building. We can't wait to see you there ! \n\n\nBest Regards,\nAnvesh Khambadkar\nCo-Ordinator OptiML",
-            "third event", "fourth event", "fifth event"
+            f"Hi, {name}\nYou have succesfully registered for the \"{event}\" event.\n for any queries contact:\n Devanshu Khole:( +919021587105 )\n{screenshot}",
+            f"Hi, {name}\n\n We are thrilled to welcome you to our event OptiML and workshop happening on November 4th, 2023. Get ready for an exciting day of learning and hands-on experience with Machine Learning(ML) Algorithms.\n\nEvent Details:\n - Date: November 4th, 2023\n\nWorshop Details:\nOur worshop will dive deep into the world of ML. Here's what you can expect:\n - Gain hands on experience with Ml Algorithms\n - Learn how to harness the power of Python libraries like NumPy, Pandas and Matplotlib.\n - Explore real-world application of ML\n\nPre-Requisites:\nWhile prior Experience is not mandatory, a little knowledge of Python libraries like NumPy, Pandas and Matplotlib would be appreciated to make the most of the workshop.\nGet ready for a day of innovation, collaboration and skill-building. We can't wait to see you there ! \nfor any queries contact Anvesh khambatkar:( +919637250270 )\n\nBest Regards,\n Techincal Team\n{screenshot}",
+            f"Hi, {name}\n\n Thank you for registering for the \"{event}\" event.\nWe are thrilled to announce our event which deals with creating interesting and exciting comics using the power of Generative AI technology.\nwe welcome you all to this experience of comic generation using AI\n\n We would also take a workshop to teach you how to make comics using AI.\n\nWorkshop Details:\nDate:\n\nregards,\nTechnical Team AIVerse\n{screenshot}",
+            f"Hi, {name}\n\n Thank you for registering for the \"{event}\" event. \nWe are thrilled to announce our \"{event}\" event which teaches you to generate music using generative AI. We welcome to Beat bots. let's make awesome music using ai. \nWorkshop details:Please contact the coordinator Rohit Pathak ( +917020915100 )\n\nRegards, Technical Team, AIVerse \n{screenshot}" ,
+            f"Hi, {name}\n\n Thank you for registering in our event \"{event}\". We are inviting you to pitch startup ideas and compete with fellow startup ideas to win amazing prizes.\n\n Let's buckle up to witness these creative domain of entrepreneurship and idea formation.\n\nIt would be an amazing experience to pitch ideas and compete with fellow entrepreneurs.\n\nSee you at the event\nfor any queries contact coordinator:\nshantnu fartode: ( +919604650588 )\nRegards,\nTechnical Team\n{screenshot}"
         ]
         if (event == "Cubic Realm"):
             l: str = p[0]
         elif (event == "optiML"):
             l: str = p[1]
-        else:
-            l: str = "not cubic realm"
+        elif(event == "GigaGen"):
+            l: str = p[2]
+        elif(event == "BeatBots"):
+            l: str = p[3]
+        elif(event == "VentureVista.AI"):
+            l:str = p[4]
 
         # send_mail(
         #     f"{event} Registration Succesfull",
