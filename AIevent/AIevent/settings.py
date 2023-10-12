@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-=$dzwah&)z+fd#_@q+5u03om0we8z=th7v!!9_h=!sj5hpki-6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ngrok.io','ngrok-free.app', 'localhost', '127.0.0.1', 'testserver', '9767-59-95-142-16.ngrok-free.app']
+ALLOWED_HOSTS = ['aiverse2k23.stvincentngp.edu.in']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -117,8 +118,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+# <<<<<<< Updated upstream
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# =======
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# >>>>>>> Stashed changes
 STATIC_URL = 'static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static",
 # ]
@@ -134,7 +141,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'svpcetaiverse@gmail.com'
-# this is the access token 
+# this is the access token
 EMAIL_HOST_PASSWORD = 'yonbgdhlolaejntg'
 EMAIL_USE_TLS = True
 # host: EMAIL_HOST

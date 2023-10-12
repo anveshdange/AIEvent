@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #0d1116;
+    padding: 50px;
+}
+
+.main-poster{
+    width: 90%;
+    height: 40vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color:#14191f;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.heading{
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    color: white;
+    /* border: 1px solid black; */
+}
+
+.main-event-div{
+    width: 90%;
+    height: fit-content;
+    /* border: 1px solid black; */
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 30px;
+    
+
+}
+
+.event{
+    width: 100%;
+    height:100%;
+    padding: 15px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: #14191f;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    position: relative;
+    
+
+    /* border: 1px solid green; */
+}
+
+.event .image{
+    width: 40%;
+    /* height: 50vh; */
+    height: 50vh;
+    /* border: 1px solid blue; */
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-bottom: 50px;
+    margin-top: 50px;  
+    /* width: 60%;
+    height: 50vh;
+    border: 1px solid green;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 50px;
+    margin-top: 50px; */
+}
+
+.image img{
+    width: 100%;
+    height: 50vh;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+}
+
+
+.event .text-right{
+    width: 60%;
+    /* border:1px solid red; */
+    height: 60%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 2px 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-right h2{
+    background: linear-gradient(135deg, #879af2 0%, #d3208b 10%, #fda000 20% );
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-left h2{
+    background: linear-gradient(135deg, #879af2 0%, #d3208b 10%, #fda000 20% );
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+
+.text-right p{
+    font-size: 13px;
+}
+
+.text-left p{
+    font-size: 13px;
+
+}
+
+.event .text-left{
+    width: 60%;
+    /* background-color: green; */
+    /* border: 1px solid blue; */
+    height: fit-content;
+    color: white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 2px 15px;
+
+}
+
+.buttons{
+    width: 100%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding-right: 40px;
+}
+
+.buttons a{
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 550px){
+    body {
+        padding:9px;
+    }
+    .event{
+        height: fit-content;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .event-right{
+        flex-direction: column-reverse !important; 
+    }
+
+    /* .event .text-left{
+        padding: 0px 0px;
+    } */
+
+    .event .image{
+        width: 100%;
+        height: fit-content;
+        /* border: 1px solid blue; */
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .image img{
+        height: 250px;
+    }
+
+    .event .text-right{
+        width: 100%;
+        /* border: 1px solid red; */
+        margin-bottom: 50px;
+    }
+
+    .event .text-left{
+        width: 100%;
+        /* border: 1px solid red; */
+        margin-bottom: 50px;
+
+
+    }
+
+    .reg-btn-right{
+        /* border: 2px solid green; */
+        bottom: 10px;
+        right: 220px;
+        left: 25px;
+    }
+
+    .reg-btn-left{
+        /* border: 2px solid green; */
+        bottom: 10px;
+        right: 220px;
+        left: 25px;
+    }
+}

@@ -31,7 +31,7 @@ def admin(request):
             for i in data:
                 p = i['fields']['Team_member']
                 p = p.replace(",", ",\n")
-                i['fields']['Team_member'] = p 
+                i['fields']['Team_member'] = p
 
             details = {
                 'data': data
@@ -132,7 +132,7 @@ def payment(request):
         msg.send()
 
         return redirect("index")
-    
+
 def about(request):
     return render(request,"event/about_dept.html")
 
@@ -185,17 +185,17 @@ def team(request):
 #############################################################################################################
 
 # configuring the basic path
-import os  
-from pathlib import Path 
-from typing import List 
+import os
+from pathlib import Path
+from typing import List
 
 path: Path = Path("event/events")
 
-EVENTS: List[str] = [  
-    "cubical_realm.html", 
-    "giga_gen.html", 
-    "beat_bots.html", 
-    "opti_ml.html", 
+EVENTS: List[str] = [
+    "cubical_realm.html",
+    "giga_gen.html",
+    "beat_bots.html",
+    "opti_ml.html",
     "startup_mela.html"
     ]
 # Added for cubical realm event page display
@@ -212,7 +212,7 @@ def giga_gen(request) -> HttpResponse:
     return render(request, cr)
 
 # Added for Beat Bots event page display
-def beat_bots(request) -> HttpResponse: 
+def beat_bots(request) -> HttpResponse:
     i : str = EVENTS[2]
     cr: Path = os.path.join(path, i)
     return render(request, cr)
@@ -229,4 +229,4 @@ def ss(request) :
     cr: Path = os.path.join(path, i)
     return render(request, cr)
 
-# this comment is for demo purpose of git pull for kaushal 
+# this comment is for demo purpose of git pull for kaushal
