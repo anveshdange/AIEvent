@@ -19,7 +19,7 @@ body{
 }
 
 /* Additional styles for the navbar animation  */
-.nav-colored { 
+.nav-colored {
   background-color: #0d1116;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
   transition: background-color 100ms linear;
@@ -43,7 +43,7 @@ body{
 #logo a{
   color: #ffffff;
   text-decoration: none;
-  
+
 }
 
 #logo a img{
@@ -111,7 +111,7 @@ color: #ffffff;
 text-decoration: none;
 }
 
-.intro{ 
+.intro{
   width: 100%;
   text-align: center;
   color: white;
@@ -603,7 +603,7 @@ animation: animate-arrow 2s linear infinite;
   min-height: 120vh;
   text-align: left;
   /* border: 1px solid red; */
- 
+
 }
 
 .events-section h1{
@@ -821,7 +821,7 @@ width: 250%;
 
 .sociallinks a{
   color: #ffffff;
-} 
+}
 
 .sociallinks a:hover{
   color: #de005e;
@@ -847,7 +847,7 @@ width: 250%;
 }
 
 
- 
+
 
 
 @media screen and (max-width: 550px) {
@@ -878,7 +878,7 @@ width: 250%;
 
 .menu{
   display: none;
-  
+
 }
 
 .heighlight2{
@@ -887,9 +887,10 @@ width: 250%;
 
 .reg{
   display: block;
+  position: absolute;
   /* justify-content: center; */
 
-  
+
 }
 
 
@@ -928,15 +929,15 @@ width: 250%;
     width: 100%;
     /* width: calc(450px * 10); */
   }
-  
-  
-  
+
+
+
   .slider .slide {
     margin-bottom: 60px;
     height: fit-content;
     width: 100%;
     /* border: 1px solid red; */
-  
+
   }
 
   .slide img{

@@ -71,7 +71,7 @@
                     <option value="BeatBots">BeatBots</option>
                     <option value="optiML">optiML</option>
                     <option value="VentureVista.AI">VentureVista.AI</option>
-                    
+
 
                 </select>
             </div>
@@ -204,15 +204,15 @@
                 payButton.disabled = false;
 
             } else if (teamValue === "3") {
-                payButton.disabled = true;
-                alert("Team size should be 1 and 2. Please select accordingly");
+               amount = 130;
+               payButton.disabled = false;
 
 
             } else if (teamValue === "4") {
-                payButton.disabled = true;
-                alert("Team size should be 1 and 2. Please select accordingly");
+               amount = 130;
+               payButton.disabled = false;
 
-            } 
+            }
         }
 
         if (eventValue === "optiML") {  // Event: Optiml
@@ -227,8 +227,8 @@
                 payButton.disabled = false;
             } else if (teamValue === "4") {
                 payButton.disabled = true;
-                alert("Team size should be 1,2 and 3. Please select accordingly");
-            } 
+                alert("Team size should be 1,2 or 3. Please select accordingly");
+            }
         }
 
         if (eventValue === "BeatBots") {  // Event: Optiml
@@ -240,10 +240,10 @@
                 payButton.disabled = false;
             } else if (teamValue === "3") {
                  payButton.disabled = true;
-                alert("Team size should be 1 and 2. Please select accordingly");
+                alert("Team size should be 1 or 2. Please select accordingly");
             } else if (teamValue === "4") {
                  payButton.disabled = true;
-                alert("Team size should be 1 and 2. Please select accordingly");
+                alert("Team size should be 1 or 2. Please select accordingly");
             }
         }
 
@@ -252,7 +252,7 @@
                 amount = 70;
 
             } else if (teamValue === "2") {
-                amount = 100;
+                amount = 150;
 
             } else if (teamValue === "3") {
                amount = 200;
